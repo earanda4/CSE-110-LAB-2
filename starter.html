@@ -41,6 +41,14 @@
            <label for = "content">Content:</label>
            <input type = "text" id="content" name ="content" required>
            <button type="submit">Submit</button>
+           <label for ="labelnote">Label Your Note:</label>
+           <select name = "notes" id="labelnote">
+                <option value="">--Select One--</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="study">Study</option>
+                <option value = "other">Other</option>
+           </select>
        </form>
 
        <div class="result" id="result"></div>
@@ -58,7 +66,8 @@
            const resultDiv = document.getElementById("result");
            resultDiv.innerHTML = `<h3>Submitted Information</h3>
                                   <p>Title: ${title}<br>
-                                    Content: ${content}</p>`;
+                                    Content: ${content}<br>
+                                    Label: ${labelnote}</p>`;
        });
    </script>
 </body>
