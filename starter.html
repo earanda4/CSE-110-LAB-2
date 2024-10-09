@@ -56,21 +56,6 @@
    </div>
 
    <script>
-        document.getElementById("title").addEventListener("focus", function () {
-           this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
-       });
-
-       document.getElementById("title").addEventListener("blur", function () {
-           this.style.backgroundColor = "";  // Reset background on blur
-       });
-
-       document.getElementById("content").addEventListener("focus", function () {
-           this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
-       });
-
-       document.getElementById("content").addEventListener("blur", function () {
-           this.style.backgroundColor = "";  // Reset background on blur
-       });
        document.getElementById("userForm").addEventListener("submit", function (event) {
            event.preventDefault();
 
@@ -85,7 +70,28 @@
                                     Content: ${content}<br>
                                     Label: ${labelnote}</p>`;
        });
-      
+       document.getElementById("title").addEventListener("focus", function () {
+           this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
+       });
+
+       document.getElementById("title").addEventListener("blur", function () {
+           this.style.backgroundColor = "";  // Reset background on blur
+       });
+
+       document.getElementById("content").addEventListener("focus", function () {
+           this.style.backgroundColor = "#e0f7fa";  // Light blue background on focus
+       });
+
+       document.getElementById("content").addEventListener("blur", function () {
+           this.style.backgroundColor = "";  // Reset background on blur
+       });
+
+       document.getElementById("title").addEventListener("input", function (){
+            const titleLength = 50;
+            if(this.value.length > titleLength){
+                alert("Title cannot exceed 50 characters.");
+            }
+       })
    </script>
 </body>
 
